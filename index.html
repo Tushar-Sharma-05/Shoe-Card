@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:'poppins',sans-serif;
+    }
+    body{
+        background: linear-gradient(rgb(194, 242, 81),rgb(194, 242, 81) 50%,white,white,white 50%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        position: relative;
+        height: 380px;
+        width: 300px;
+        background-color: black;
+        box-shadow: 0 15px 45px rgb(0, 0, 0,0.5);
+        display: flex;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+    .card:hover{
+       width: 600px; 
+    }
+
+    .card .image{
+        position: relative;
+        min-width: 300px;
+        height: 100%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .card .image img{
+        max-width: 300px;
+        transition: 0.5s ease-in-out;
+    }
+    .card:hover .image img{
+        transform: rotate(-35deg) translateX(-20px);
+    }
+    .card .text{
+        position: absolute;
+        left: 0;
+        min-width: 300px;
+        height: 100%;
+        background-color: rgb(194, 242, 81);
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+        transition: 0.5s ease-in-out;
+
+    }
+    .card:hover .text{
+        left: 300px;
+
+    }
+
+    .card .text::before{
+        content: '';
+        position:absolute;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid white;
+
+    }
+
+    .card .text h3{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 1em;
+    }
+    .card .text h3 span{
+        font-size: 0.65em;
+        font-weight: 300;
+        text-transform: none;
+        opacity: 0.85;
+    }
+    .card .text h4{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        line-height: 1em;
+        line-height: 1em;
+    }
+    .card .text p{
+        color: white;
+        opacity: 0.85;
+        font-size: 0.8em;
+
+    }
+    .card .text .size{
+        display: flex;
+        gap: 10px;
+
+    }
+    .card .text .size li{
+        list-style: none;
+        color: white;
+        font-size: 0.9em;
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        opacity: 0.65;
+        cursor: pointer;
+
+        
+    }
+    .card .text .size li:hover{
+        color: rgb(194, 242, 81);
+        background: white;
+        opacity: 1;
+
+    }
+
+    .card .text  .group{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+    }
+
+    .card .text .group h2{
+        color: white;
+        font-weight: 600;
+        font-size: 2em;
+
+    }
+    .card .text .group h2 sup{
+        font-weight: 300;
+    }
+    .card .text .group h2 small{
+        font-size: 0.75em;
+    }
+    .card .text .group a{
+        display: inline-flex;
+        padding: 10px 25px;
+        background: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: rgb(142, 221, 53);
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="/images/shoe.png" alt="">
+        </div>
+        <div class="text">
+            <h3>Nike Air Max <br><span>Men's Shoe</span> </h3>
+            <h4>Product Details</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aliquam pariatur facere dolorem.</p>
+            <h4>Size</h4>
+            <ul class="size">
+                <li>36</li>
+                <li>38</li>
+                <li>40</li>
+                <li>42</li>
+                <li>44</li>
+            </ul>
+            <div class="group">
+                <h2><sup>$</sup>199 <small>.99</small></h2>
+                <a href="#">Buy Now</a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
